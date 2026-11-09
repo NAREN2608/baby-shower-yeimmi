@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Un pequeño osito está en camino · Baby shower</title>
+<meta name="description" content="Estás invitado a un baby shower. Abre la invitación para ver los detalles.">
+<meta name="theme-color" content="#D6E5EE">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Un pequeño osito está en camino">
+<meta property="og:description" content="Estás invitado a un baby shower. Abre la invitación para ver los detalles.">
+<meta property="og:image" content="public/assets/images/preview.png">
+<meta property="og:image:alt" content="Globo aerostático azul con un osito de peluche en la cesta">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="public/assets/images/oso.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Nunito:wght@400;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+ <symbol id="nube" viewBox="0 0 200 80"><rect x="14" y="38" width="172" height="36" rx="18"/><circle cx="58" cy="40" r="24"/><circle cx="102" cy="30" r="30"/><circle cx="148" cy="42" r="22"/></symbol>
+ <symbol id="estrella" viewBox="0 0 100 100"><polygon points="50,8 61,38 93,38 67,57 77,89 50,70 23,89 33,57 7,38 39,38" stroke-linejoin="round" stroke-width="6"/></symbol>
+ <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="3"/><path d="M8 3v4M16 3v4M3.5 10h17"/></symbol>
+ <symbol id="i-hora" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v5l3 2"/></symbol>
+ <symbol id="i-lugar" viewBox="0 0 24 24"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.500 11z"/><circle cx="12" cy="10" r="2.3"/></symbol>
+ <symbol id="i-regalo" viewBox="0 0 24 24"><path d="M4 11h16v9H4zM3 7.5h18V11H3zM12 7.5V20M12 7.5c-1.5-4-5.5-3-4.5-.5M12 7.5c1.5-4 5.5-3 4.5-.5"/></symbol>
+</svg>
+<main>
+<!-- ESTADO 1: pantalla inicial del globo -->
+<section class="inicio" id="inicio" aria-labelledby="titulo">
+ <div class="cielo" aria-hidden="true">
+  <svg class="n n1" viewBox="0 0 200 80"><use href="#nube"/></svg><svg class="n n2" viewBox="0 0 200 80"><use href="#nube"/></svg>
+  <picture><source type="image/webp" srcset="public/assets/images/globos.webp"><img class="racimo r1" src="public/assets/images/globos_web.png" width="280" height="537" alt="" aria-hidden="true"  decoding="async"></picture><picture><source type="image/webp" srcset="public/assets/images/globos.webp"><img class="racimo r2" src="public/assets/images/globos_web.png" width="280" height="537" alt="" aria-hidden="true"  decoding="async"></picture>
+  <svg class="e e1" viewBox="0 0 100 100"><use href="#estrella"/></svg><svg class="e e2" viewBox="0 0 100 100"><use href="#estrella"/></svg>
+ </div>
+ <div class="inicio-caja">
+  <h1 id="titulo"><span>Un pequeño osito</span> <span>está en camino</span></h1>
+  <div class="globo-wrap"><picture><source type="image/webp" srcset="public/assets/images/portada.webp"><img class="globo" src="public/assets/images/portada_web.png" width="467" height="720" alt="Osito de peluche saludando desde un globo aerostático azul, beige y café, con banderines y corazones" fetchpriority="high" decoding="async"></picture></div>
+  <a class="btn" id="abrir" href="#invitacion">Abrir invitación</a>
+ </div>
+</section>
+
+<!-- ESTADO 2: la invitación (oculta hasta pulsar "Abrir invitación" cuando hay JavaScript) -->
+<div class="invitacion" id="invitacion">
+ <section class="sec bienvenida" aria-labelledby="t-bi">
+  <div class="cont">
+   <h2 id="t-bi" tabindex="-1">Ya casi nos conocemos!!</h2>
+   <p class="bebe" data-si="nombreBebe" hidden><span data-campo="nombreBebe"></span></p>
+   <p class="padres" data-si="nombresPadres" hidden>Con cariño, <span data-campo="nombresPadres"></span></p>
+   <p class="lema" data-campo="mensajeInvitacion">Mis papás Yeimmi y Edwin, están organizando una fiesta muy especial para esperarme, ¡y quiero que estés ahí!</p>
+  </div>
+ </section>
+
+ <section class="sec contador" id="contador" aria-labelledby="t-co" style="--prev:var(--crema)">
+  <picture><source type="image/webp" srcset="public/assets/images/globos.webp"><img class="racimo r3" src="public/assets/images/globos_web.png" width="280" height="537" alt="" aria-hidden="true" loading="lazy" decoding="async"></picture>
+  <div class="cont">
+   <h2 id="t-co">Falta poco para nuestro gran día</h2>
+   <p class="fecha-grande"><svg class="ic" aria-hidden="true"><use href="#i-cal"/></svg><span data-campo="fechaTxt">Por confirmar</span></p>
+   <p class="hora-grande"><svg class="ic" aria-hidden="true"><use href="#i-hora"/></svg><span data-campo="horaTxt">Por confirmar</span></p>
+   <div class="cuenta" data-si="cuenta" role="timer" aria-label="Tiempo que falta para el baby shower" hidden>
+    <picture><source type="image/webp" srcset="public/assets/images/globo_aerostatico.webp"><img class="gt" src="public/assets/images/globo_aerostatico_web.png" width="180" height="289" alt="" aria-hidden="true" decoding="async"></picture>
+    <p class="cu-dias"><b data-c="d">00</b><span>días</span></p>
+    <div class="cu-resto"><p><b data-c="h">00</b><span>horas</span></p><i aria-hidden="true">:</i><p><b data-c="m">00</b><span>minutos</span></p><i aria-hidden="true">:</i><p><b data-c="s">00</b><span>segundos</span></p></div>
+   </div>
+   <p class="estado" id="estado" role="status" hidden></p>
+   <button class="btn alt" id="cal" data-si="cal" type="button" hidden>Añadir al calendario</button>
+   <div class="deco"><picture><source type="image/webp" srcset="public/assets/images/oso_mono.webp"><img class="osito" src="public/assets/images/oso_mono_web.png" width="520" height="563" alt="Osito de peluche con un moño azul, sentado sobre una nube" loading="lazy" decoding="async"></picture></div>
+  </div>
+ </section>
+
+ <section class="sec ubicacion" id="ubicacion" aria-labelledby="t-ub" style="--prev:var(--azul)">
+  <div class="cont">
+   <h2 id="t-ub">Dónde será</h2>
+   <div class="tarjeta-mapa">
+    <picture><source type="image/webp" srcset="public/assets/images/globo_solito.webp"><img class="pin" src="public/assets/images/globo_solito_web.png" width="220" height="336" alt="Globo aerostático azul y crema con la carita de un osito" loading="lazy" decoding="async"></picture>
+    <p class="lugar"><svg class="ic" aria-hidden="true"><use href="#i-lugar"/></svg><span data-campo="lugar" class="pend">Por confirmar</span></p>
+    <p class="dir" data-campo="direccion" data-opc></p>
+    <div class="mapa" id="mapa-caja" hidden></div>
+    <a class="btn" id="mapa" data-si="mapa" target="_blank" rel="noopener" hidden>Ver ubicación en Google Maps</a>
+   </div>
+  </div>
+ </section>
+
+ <section class="sec regalos" id="regalos" aria-labelledby="t-rg" style="--prev:var(--beige)">
+  <div class="cont ancho">
+   <picture><source type="image/webp" srcset="public/assets/images/globos.webp"><img class="racimo r4" src="public/assets/images/globos_web.png" width="280" height="537" alt="" aria-hidden="true" loading="lazy" decoding="async"></picture>
+   <h2 id="t-rg">Lista de regalos</h2>
+   <p class="intro">Marca lo que piensas llevar para orientar a los demás invitados. No es una compra ni una confirmación de asistencia.</p>
+   <p class="nota-r" data-campo="textoRegalos" data-opc></p>
+   <p class="estado-db" id="estado-db" role="status"></p>
+   <form id="form-regalos" novalidate>
+    <fieldset><legend>Regalos únicos <small>(solo una persona puede elegir cada uno)</small></legend><ul class="lista unicos" id="lista-unicos"></ul></fieldset>
+    <fieldset><legend>Regalos que pueden repetirse</legend><ul class="lista varios" id="lista-varios"></ul></fieldset>
+    <div class="reserva">
+     <label for="nombre">Tu nombre</label>
+     <input id="nombre" name="nombre" autocomplete="name" maxlength="60" placeholder="Nombre y apellido">
+     <p class="tu-sel"><b>Tu selección:</b> <output id="resumen" for="lista-unicos lista-varios">Aún no has elegido nada.</output></p>
+     <button class="btn" id="enviar" type="submit">Guardar selección de regalos</button>
+     <p class="msg-r" id="msg-regalos" role="status" aria-live="polite"></p>
+    </div>
+   </form>
+  </div>
+ </section>
+
+ <section class="sec asistencia" id="asistencia" data-si="asistencia" aria-labelledby="t-as" style="--prev:var(--crema)" hidden>
+  <div class="cont">
+   <h2 id="t-as">Confirma tu asistencia</h2>
+   <p class="intro">Avísale a los papás si podrás acompañarlos. Es independiente de la lista de regalos.</p>
+   <form id="form-asistencia" novalidate>
+    <label for="as-nombre">Tu nombre</label>
+    <input id="as-nombre" autocomplete="name" maxlength="60" placeholder="Nombre y apellido">
+    <fieldset class="opciones"><legend>¿Podrás asistir?</legend>
+     <label class="op"><input type="radio" name="asiste" value="si" checked><span>Sí asistiré</span></label>
+     <label class="op"><input type="radio" name="asiste" value="no"><span>No podré asistir</span></label>
+    </fieldset>
+    <div id="as-cant"><label for="as-n">Personas en total, contándote a ti</label><input id="as-n" type="number" inputmode="numeric" min="1" max="20" value="1"></div>
+    <a class="btn" id="wa-mama" role="button" target="_blank" rel="noopener" href="#asistencia" hidden>Confirmar a mamá por WhatsApp</a>
+    <a class="btn" id="wa-papa" role="button" target="_blank" rel="noopener" href="#asistencia" hidden>Confirmar a papá por WhatsApp</a>
+    <p class="msg-r" id="as-msg" role="status" aria-live="polite"></p>
+    <a class="alt-link" id="wa-mama-alt" target="_blank" rel="noopener" hidden>Si WhatsApp de mamá no se abrió, toca aquí para continuar</a>
+    <a class="alt-link" id="wa-papa-alt" target="_blank" rel="noopener" hidden>Si WhatsApp de papá no se abrió, toca aquí para continuar</a>
+   </form>
+  </div>
+ </section>
+
+ <footer class="sec cierre" id="cierre">
+  <div class="cont">
+   <div class="oso-wrap rev"><picture><source type="image/webp" srcset="public/assets/images/oso_nube.webp"><img class="oso-cierre" src="public/assets/images/oso_nube_web.png" width="640" height="795" alt="Osito de peluche abrazando un corazón azul, sentado sobre una nube con una luna y estrellas" loading="lazy" decoding="async"></picture></div>
+   <p class="gracias rev">Gracias por acompañarnos a esperar a este pequeño osito.</p>
+   <nav aria-label="Información principal"><a href="#contador">Fecha y hora</a><a href="#ubicacion">Ubicación</a><a href="#regalos">Regalos</a><a href="#asistencia" data-si="asistencia" hidden>Asistencia</a></nav>
+  </div>
+ </footer>
+</div>
+</main>
+<script src="config.js"></script>
+<script src="script.js"></script>
+<script src="regalos.js"></script>
+</body>
+</html>

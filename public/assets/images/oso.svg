@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 220"><style>:root{--azul-claro:#D6E5EE;--azul:#C0D7E4;--crema:#F0DDCB;--beige:#E7CFB8;--camel-claro:#C9A786;--camel:#B68F69;--marron-suave:#A78463;--marron:#8B6542;--marron-oscuro:#6B4D34;
+}.pc{fill:var(--camel-claro)}.pm{fill:var(--camel)}.pb{fill:var(--beige)}.pk{fill:var(--crema)}.po{fill:var(--marron-oscuro)}.pa{fill:var(--azul)}.traz{fill:none;stroke:var(--marron-oscuro);stroke-width:3;stroke-linecap:round}.punt{fill:none;stroke:var(--crema);stroke-width:2.5;stroke-dasharray:5 5;stroke-linecap:round}.brazo{stroke:var(--camel);stroke-width:2}</style>
+  <ellipse class="pc" cx="62" cy="200" rx="26" ry="17"/><ellipse class="pc" cx="138" cy="200" rx="26" ry="17"/>
+  <ellipse class="pk" cx="58" cy="203" rx="11" ry="7"/><ellipse class="pk" cx="142" cy="203" rx="11" ry="7"/>
+  <ellipse class="pc" cx="100" cy="158" rx="54" ry="54"/><ellipse class="pk" cx="100" cy="166" rx="31" ry="34"/>
+  <ellipse class="pc brazo" cx="48" cy="152" rx="14" ry="30" transform="rotate(20 48 152)"/>
+  <ellipse class="pc brazo" cx="152" cy="152" rx="14" ry="30" transform="rotate(-20 152 152)"/>
+  <circle class="pm" cx="58" cy="52" r="23"/><circle class="pm" cx="142" cy="52" r="23"/>
+  <circle class="pb" cx="58" cy="52" r="11"/><circle class="pb" cx="142" cy="52" r="11"/>
+  <ellipse class="pc" cx="100" cy="88" rx="60" ry="52"/><path class="punt" d="M100 38v22"/>
+  <ellipse class="pb" cx="60" cy="102" rx="9" ry="6" opacity=".8"/><ellipse class="pb" cx="140" cy="102" rx="9" ry="6" opacity=".8"/>
+  <ellipse class="pk" cx="100" cy="106" rx="25" ry="19"/><ellipse class="po" cx="100" cy="97" rx="9" ry="6.5"/>
+  <path class="traz" d="M100 103v7m0 0c-4 6-12 6-15 1m15-1c4 6 12 6 15 1"/>
+  <circle class="po" cx="76" cy="82" r="5.5"/><circle class="po" cx="124" cy="82" r="5.5"/>
+  <circle class="pk" cx="74.5" cy="80" r="1.8"/><circle class="pk" cx="122.5" cy="80" r="1.8"/>
+  <rect class="pa" x="121" y="112" width="19" height="19" rx="4" transform="rotate(10 130 121)"/>
+  <rect class="punt" x="121" y="112" width="19" height="19" rx="4" transform="rotate(10 130 121)" style="stroke-width:1.6;stroke-dasharray:3 3"/>
+ </svg>
