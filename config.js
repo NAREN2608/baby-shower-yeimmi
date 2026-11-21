@@ -22,7 +22,7 @@ window.INVITACION = {
   regalos: [
     { id: "tina", nombre: "Tina para bebé", tipo: "unico" },
     { id: "kit-aseo", nombre: "Kit de aseo completo", tipo: "unico" },
-    { id: "cuna-moises", nombre: "Cuna o moisés", tipo: "unico" },
+    { id: "cuna-moises", nombre: "Cunacolecho", tipo: "unico" },
     { id: "monitor", nombre: "Monitor para bebé", tipo: "unico" },
     { id: "termometro", nombre: "Termómetro digital", tipo: "unico" },
     { id: "organizador-panales", nombre: "Organizador de pañales", tipo: "unico" },
